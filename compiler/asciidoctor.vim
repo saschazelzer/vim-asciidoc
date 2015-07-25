@@ -24,8 +24,7 @@ let &l:errorformat = ''
 function! s:set_makeprg()
   let &l:makeprg = ''
         \. 'asciidoctor'
-        \. ' -a urldata'
-        \. ' -a icons'
+        \. ' -r asciidoctor-diagram'
         \. ' ' . get(b:, 'asciidoctor_theme', '')
         \. ' ' . get(b:, 'asciidoctor_icons_dir', '-a iconsdir=./images/icons/')
         \. ' ' . get(b:, 'asciidoctor_backend', '')
